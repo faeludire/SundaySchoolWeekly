@@ -8,7 +8,7 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-for i in range(95,120):
+for i in range(151, 400):
     #File path for the lessons
     filepath = 'Memory_verses/'+str(i)+'.txt'
 
