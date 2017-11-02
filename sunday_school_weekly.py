@@ -51,7 +51,7 @@ for i in range(95, 200, 1):
 
     while presentWeekNumber < nextWeekNumber:
         presentUpdateTime = datetime.datetime.now()
-        if presentUpdateTime.hour == 11 and presentUpdateTime.minute == 0 and presentUpdateTime.second == 0 and \
+        if presentUpdateTime.hour == 11 and presentUpdateTime.minute == 30 and presentUpdateTime.second == 0 and \
                         presentUpdateTime.microsecond == 0:
             tweet_lesson(i)
             print('I tweeted this lesson at ', datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'), 'Next Tweet will '
