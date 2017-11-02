@@ -43,15 +43,17 @@ def tweet_lesson(lesson_number):
 for i in range(95, 200, 1):
     print("Currently Tweeting Lesson Number = ", i, '\n')
     presentUpdateTime = datetime.datetime.now()
-    presentWeekNumber = datetime.date(presentUpdateTime).isocalendar()[1]
-    nextWeekNumber = datetime.date(presentUpdateTime).isocalendar()[1] + 1
+    presentWeekNumber = datetime.date(presentUpdateTime.year,
+                                      presentUpdateTime.month,
+                                      presentUpdateTime.day).isocalendar()[1]
+    nextWeekNumber = presentWeekNumber + 1
 
     print('Present week number == ', presentWeekNumber)
     print('Next week number == ', nextWeekNumber)
 
     while presentWeekNumber < nextWeekNumber:
         presentUpdateTime = datetime.datetime.now()
-        if presentUpdateTime.hour == 11 and presentUpdateTime.minute == 30 and presentUpdateTime.second == 0 and \
+        if presentUpdateTime.hour == 11 and presentUpdateTime.minute == 0 and presentUpdateTime.second == 0 and \
                         presentUpdateTime.microsecond == 0:
             tweet_lesson(i)
             print('I tweeted this lesson at ', datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'), 'Next Tweet will '
