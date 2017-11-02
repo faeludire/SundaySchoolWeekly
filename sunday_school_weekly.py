@@ -59,5 +59,7 @@ for i in range(95, 200, 1):
             print('I tweeted this lesson at ', datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'), 'Next Tweet will '
                                                                                                       'be tomorrow at '
                                                                                                       '11:00AM', '\n\n')
-        presentWeekNumber = datetime.date(presentUpdateTime).isocalendar()[1]
+        presentWeekNumber = datetime.date(presentUpdateTime.year,
+                                      presentUpdateTime.month,
+                                      presentUpdateTime.day).isocalendar()[1]
 
