@@ -56,8 +56,8 @@ for i in range(96, 200, 1):
         if presentUpdateTime.hour == 14 and presentUpdateTime.minute == 30 and presentUpdateTime.second > 0 and presentUpdateTime.second < 5:
             tweet_lesson(i)
             print('I tweeted this lesson at ', datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'),
-                  'Next Tweet will be at 13:05PM tomorrow')
+                  'Next Tweet will be at 15:30 PM tomorrow')
+        sleep(80000)
         presentWeekNumber = datetime.date(presentUpdateTime.year,
                                           presentUpdateTime.month,
                                           presentUpdateTime.day).isocalendar()[1]
-
